@@ -36,8 +36,8 @@ $workspaceId = New-FabricWorkspace  -name $workspaceName -skipErrorIfExists
 
 # Import the semantic model into Fabric workspace
 
-#$semanticModelImport = Import-FabricItem -workspaceId $workspaceId -path $pbipSemanticModelPath
-$semanticModelImport = @{ "Id" = "4db8f21a-ed48-4328-abe1-4c1eb43438c3" }
+$semanticModelImport = Import-FabricItem -workspaceId $workspaceId -path $pbipSemanticModelPath
+#$semanticModelImport = @{ "Id" = "4db8f21a-ed48-4328-abe1-4c1eb43438c3" }
 
 # Manipulate the PBIR before publishing
 
