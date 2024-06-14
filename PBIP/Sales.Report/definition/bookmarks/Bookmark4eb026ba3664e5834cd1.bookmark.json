@@ -1,0 +1,667 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/bookmark/1.0.0/schema.json",
+  "name": "Bookmark4eb026ba3664e5834cd1",
+  "displayName": "CategoryInsightKPITotal",
+  "explorationState": {
+    "version": "1.3",
+    "activeSection": "ReportSectionb7b47354e48449752830",
+    "filters": {
+      "byExpr": [
+        {
+          "name": "Filter",
+          "type": "Categorical",
+          "expression": {
+            "HierarchyLevel": {
+              "Expression": {
+                "Hierarchy": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Organization"
+                    }
+                  },
+                  "Hierarchy": "Organization Hierarchy"
+                }
+              },
+              "Level": "OrganizationLev1Text"
+            }
+          },
+          "howCreated": 1,
+          "cachedDisplayNames": [
+            {
+              "id": {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Organization"
+                          }
+                        },
+                        "Property": "OrganizationLev1Text"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'DIREKTØR 2: Børn & Famile/ Skoler, Kultur & Fritid/ Handicap og Psykiatri'"
+                      }
+                    }
+                  }
+                }
+              },
+              "displayName": "DIREKTØR 2: Børn & Famile/ Skoler, Kultur & Fritid/ Handicap og Psykiatri"
+            }
+          ]
+        },
+        {
+          "name": "Filter81a623f965aad007267a",
+          "type": "Categorical",
+          "expression": {
+            "HierarchyLevel": {
+              "Expression": {
+                "Hierarchy": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Organization"
+                    }
+                  },
+                  "Hierarchy": "Organization Hierarchy"
+                }
+              },
+              "Level": "OrganizationLev2Text"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filterfaff22655d0f0bd6a6d5",
+          "type": "Categorical",
+          "expression": {
+            "HierarchyLevel": {
+              "Expression": {
+                "Hierarchy": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Organization"
+                    }
+                  },
+                  "Hierarchy": "Organization Hierarchy"
+                }
+              },
+              "Level": "OrganizationLev3Text"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filter68591eb4b8a585584e04",
+          "type": "Categorical",
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Organization"
+                }
+              },
+              "Property": "OrganizationDescription"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filter6ef0242f8cc14cac8336",
+          "type": "Categorical",
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Supplier"
+                }
+              },
+              "Property": "SupplierName"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filterf172e90906c0e264f326",
+          "type": "Categorical",
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "TenderGroup"
+                }
+              },
+              "Property": "TaxonomyTenderTypeDescription"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filter555aee922bf5d4d481aa",
+          "type": "Categorical",
+          "expression": {
+            "HierarchyLevel": {
+              "Expression": {
+                "Hierarchy": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "TenderGroup"
+                    }
+                  },
+                  "Hierarchy": "Tender Hierachy"
+                }
+              },
+              "Level": "TaxonomyProcurementCategoryLev1Text"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filter14478a3309f676c4d88c",
+          "type": "Categorical",
+          "expression": {
+            "HierarchyLevel": {
+              "Expression": {
+                "Hierarchy": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "TenderGroup"
+                    }
+                  },
+                  "Hierarchy": "Tender Hierachy"
+                }
+              },
+              "Level": "TaxonomyProcurementCategoryLev2Text"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filtere50c04055e379ac87329",
+          "type": "Categorical",
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "InvoiceType"
+                }
+              },
+              "Property": "InvoiceTypeText"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filter2034bf5a510ba3a5ced5",
+          "type": "Categorical",
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Online"
+                }
+              },
+              "Property": "OnlineText"
+            }
+          },
+          "howCreated": 1
+        },
+        {
+          "name": "Filterfd764f25d044e5e159b7",
+          "type": "Advanced",
+          "expression": {
+            "Column": {
+              "Expression": {
+                "SourceRef": {
+                  "Entity": "Geography"
+                }
+              },
+              "Property": "MunicipalityLong"
+            }
+          },
+          "howCreated": 1
+        }
+      ]
+    },
+    "sections": {
+      "ReportSectionb7b47354e48449752830": {
+        "filters": {
+          "byExpr": [
+            {
+              "name": "Filter1358d8e12f820d46e280",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Compliance"
+                    }
+                  },
+                  "Property": "RequestForProposalText"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filterb075758d795223c0a028",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Compliance"
+                    }
+                  },
+                  "Property": "SupplierLoyaltyText"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filter6c00ff7880f75e334eb9",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Compliance"
+                    }
+                  },
+                  "Property": "ItemGroupLoyaltyText"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filterf21a1529fd2c50df963a",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Compliance"
+                    }
+                  },
+                  "Property": "ItemNumberLoyaltyText"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filter9c5d3c6b4838bbe9c8b0",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Compliance"
+                    }
+                  },
+                  "Property": "SortimentLoyaltyText"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filter19cff76c6ece1fb29303",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Online"
+                    }
+                  },
+                  "Property": "OnlineText"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filter3facfed2da6698b77266",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ProcurementAgreement"
+                    }
+                  },
+                  "Property": "ECommerceActual"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filter30b6013cef247e0af48a",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ProcurementAgreement"
+                    }
+                  },
+                  "Property": "ECommercePotential"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filtere2865a6f8b21dbc92aad",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Supplier"
+                    }
+                  },
+                  "Property": "SupplierSubGroupSize"
+                }
+              },
+              "howCreated": 1
+            },
+            {
+              "name": "Filter18adc7e50c51ebd5a7a5",
+              "type": "Categorical",
+              "expression": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "TenderGroup"
+                    }
+                  },
+                  "Property": "TaxonomyTenderTypeDescription"
+                }
+              },
+              "howCreated": 5
+            },
+            {
+              "name": "Filtera35f064af71d72ed7d07",
+              "type": "Categorical",
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "t",
+                    "Entity": "TenderGroup",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "t"
+                                }
+                              },
+                              "Property": "TaxonomyProcurementCategoryLev1Text"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Fødevarer'"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
+              },
+              "expression": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "TenderGroup"
+                        }
+                      },
+                      "Hierarchy": "Tender Hierachy"
+                    }
+                  },
+                  "Level": "TaxonomyProcurementCategoryLev1Text"
+                }
+              },
+              "howCreated": 5,
+              "cachedDisplayNames": [
+                {
+                  "id": {
+                    "scopeId": {
+                      "Comparison": {
+                        "ComparisonKind": 0,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "TenderGroup"
+                              }
+                            },
+                            "Property": "TaxonomyProcurementCategoryLev1Text"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "'Fødevarer'"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "displayName": "Fødevarer"
+                }
+              ]
+            },
+            {
+              "name": "Filterd945456c1fbe62ebce1a",
+              "type": "Categorical",
+              "expression": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "TenderGroup"
+                        }
+                      },
+                      "Hierarchy": "Tender Hierachy"
+                    }
+                  },
+                  "Level": "TaxonomyProcurementCategoryLev2Text"
+                }
+              },
+              "howCreated": 5
+            },
+            {
+              "name": "Filter4b5d0e043edc21234164",
+              "type": "Categorical",
+              "expression": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "TenderGroup"
+                        }
+                      },
+                      "Hierarchy": "Tender Hierachy"
+                    }
+                  },
+                  "Level": "TaxonomyProcurementCategoryLev3Text"
+                }
+              },
+              "howCreated": 5
+            },
+            {
+              "name": "Filterd884842512943a5710a4",
+              "type": "Categorical",
+              "expression": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UNSPSC"
+                        }
+                      },
+                      "Hierarchy": "UNSPSC Hierachy"
+                    }
+                  },
+                  "Level": "UNSPSCClassLev1Description"
+                }
+              },
+              "howCreated": 5
+            },
+            {
+              "name": "Filterbb28ce153ed7061e891c",
+              "type": "Categorical",
+              "expression": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UNSPSC"
+                        }
+                      },
+                      "Hierarchy": "UNSPSC Hierachy"
+                    }
+                  },
+                  "Level": "UNSPSCClassLev2Description"
+                }
+              },
+              "howCreated": 5
+            },
+            {
+              "name": "Filter6827de4f4b7a7071915a",
+              "type": "Categorical",
+              "expression": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UNSPSC"
+                        }
+                      },
+                      "Hierarchy": "UNSPSC Hierachy"
+                    }
+                  },
+                  "Level": "UNSPSCClassLev3Description"
+                }
+              },
+              "howCreated": 5
+            },
+            {
+              "name": "Filter905496f003923ae4b79e",
+              "type": "Categorical",
+              "expression": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UNSPSC"
+                        }
+                      },
+                      "Hierarchy": "UNSPSC Hierachy"
+                    }
+                  },
+                  "Level": "UNSPSCClassLev4Description"
+                }
+              },
+              "howCreated": 5
+            },
+            {
+              "name": "Filtere93d13fc78bb55777078",
+              "type": "Categorical",
+              "expression": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UNSPSC"
+                        }
+                      },
+                      "Hierarchy": "UNSPSC Hierachy"
+                    }
+                  },
+                  "Level": "UNSPSCClassDescription"
+                }
+              },
+              "howCreated": 5
+            }
+          ]
+        },
+        "visualContainers": {},
+        "visualContainerGroups": {
+          "954233c2a45205940010": {
+            "children": {
+              "5aea07fea006a780223e": {
+                "isHidden": true
+              },
+              "8a1086e810cecca70565": {
+                "isHidden": false
+              },
+              "cbb36f2236842a5dab25": {
+                "isHidden": false
+              },
+              "27245f076c1250563c6e": {
+                "isHidden": true
+              },
+              "eaa6b5ed1d500ee315d8": {
+                "isHidden": true
+              },
+              "81885a7e97076e416e40": {
+                "isHidden": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "objects": {
+      "merge": {
+        "outspacePane": [
+          {
+            "properties": {
+              "expanded": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              },
+              "visible": {
+                "expr": {
+                  "Literal": {
+                    "Value": "true"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "options": {
+    "targetVisualNames": [],
+    "suppressData": true
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
+  "name": "9ed59a6e36a17dcf9a25",
+  "position": {
+    "x": 31.189400477181582,
+    "y": 154.90735570333518,
+    "z": 4000,
+    "width": 1226.783085435809,
+    "height": 543.73521498553225,
+    "tabOrder": 4000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sales"
+                    }
+                  },
+                  "Property": "Order Date"
+                }
+              },
+              "queryRef": "Sales.Order Date",
+              "nativeQueryRef": "Order Date"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sales"
+                    }
+                  },
+                  "Property": "Sales Qty"
+                }
+              },
+              "queryRef": "Sales.Sales Qty",
+              "nativeQueryRef": "Sales Qty"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sales"
+                    }
+                  },
+                  "Property": "Sales Qty by Delivery Date"
+                }
+              },
+              "queryRef": "Sales.Sales Qty by Delivery Date",
+              "nativeQueryRef": "Sales Qty by Delivery Date"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sales"
+                    }
+                  },
+                  "Property": "Sales Amount (YTD)"
+                }
+              },
+              "queryRef": "Sales.Sales Amount (YTD)",
+              "nativeQueryRef": "Sales Amount (YTD)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sales"
+                    }
+                  },
+                  "Property": "Order Number"
+                }
+              },
+              "queryRef": "Sales.Order Number",
+              "nativeQueryRef": "Order Number"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sales"
+                    }
+                  },
+                  "Property": "ProductKey"
+                }
+              },
+              "queryRef": "Sales.ProductKey",
+              "nativeQueryRef": "ProductKey"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sales"
+                    }
+                  },
+                  "Property": "Environment"
+                }
+              },
+              "queryRef": "Sales.Environment",
+              "nativeQueryRef": "Environment"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sales"
+                    }
+                  },
+                  "Property": "Exchange Rate"
+                }
+              },
+              "queryRef": "Sales.Exchange Rate",
+              "nativeQueryRef": "Exchange Rate"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sales"
+                    }
+                  },
+                  "Property": "CustomerKey"
+                }
+              },
+              "queryRef": "Sales.CustomerKey",
+              "nativeQueryRef": "CustomerKey"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filter95554b19f74e2a0285b2",
+        "ordinal": 6,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Product"
+              }
+            },
+            "Property": "Category"
+          }
+        },
+        "howCreated": "User",
+        "isHiddenInViewMode": true
+      }
+    ],
+    "filterSortOrder": "Custom"
+  }
+}
