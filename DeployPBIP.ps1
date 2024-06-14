@@ -1,12 +1,14 @@
 # Description: This script is used to deploy a PBIP to a Fabric workspace, and manipulate the PBIP file before publishing it.
 # Learn more: https://learn.microsoft.com/en-us/rest/api/fabric/articles/get-started/deploy-project
 
+$ErrorActionPreference = "Stop"
+
 # Parameters 
 
 $workspaceName = "RR - PBIR - Demo 01"
 $pbipSemanticModelPath = ".\PBIP\Sales.SemanticModel"
 $pbipReportPath = ".\PBIP\Sales.Report"
-$environment = "DEV"
+$environment = "TST"
 
 $currentPath = (Split-Path $MyInvocation.MyCommand.Definition -Parent)
 Set-Location $currentPath
@@ -35,6 +37,7 @@ $workspaceId = New-FabricWorkspace  -name $workspaceName -skipErrorIfExists
 # Import the semantic model into Fabric workspace
 
 $semanticModelImport = Import-FabricItem -workspaceId $workspaceId -path $pbipSemanticModelPath
+#$semanticModelImport = @{ "Id" = "4db8f21a-ed48-4328-abe1-4c1eb43438c3" }
 
 # Manipulate the PBIR before publishing
 
@@ -50,17 +53,77 @@ $json | ConvertTo-Json -Depth 100 | Set-Content "$definitionPath\pages\pages.jso
 
 ## Set default values on slicers
 
-$slicerFiles = Get-ChildItem $definitionPath -Recurse -Filter visual.json | Where-Object { 
+$slicerFiles = Get-ChildItem $definitionPath -Recurse -Filter "visual.json" | Where-Object { 
     $json = Get-Content $_.FullName | ConvertFrom-Json
     
-    $json.name -eq "4e0e638edcb47268821e"
+    $json.name -in @("4e0e638edcb47268821e", "f42f1648ed721ff28383")
  }
 
 foreach ($file in $slicerFiles) {
 
     $json = Get-Content $file.FullName | ConvertFrom-Json
 
-    $json.visual.objects.general.properties.filter.filter.where.condition.in.values.literal.value = "$([datetime]::Now.Year)L"
+    # Year slicer
+    if ($json.name -eq "4e0e638edcb47268821e")
+    {
+        $yearFilterJson = "        
+            {""filter"": {
+                ""Version"": 2,
+                ""From"": [
+                  {
+                    ""Name"": ""c"",
+                    ""Entity"": ""Calendar"",
+                    ""Type"": 0
+                  }
+                ],
+                ""Where"": [
+                  {
+                    ""Condition"": {
+                      ""In"": {
+                        ""Expressions"": [
+                          {
+                            ""Column"": {
+                              ""Expression"": {
+                                ""SourceRef"": {
+                                  ""Source"": ""c""
+                                }
+                              },
+                              ""Property"": ""Year""
+                            }
+                          }
+                        ],
+                        ""Values"": [
+                          [
+                            {
+                              ""Literal"": {
+                                ""Value"": ""$([datetime]::Now.Year)L""
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }"
+                
+        if ($json.visual.objects.general.properties.filter)
+        {
+            $json.visual.objects.general.properties.PSObject.Properties.Remove('filter')
+        }
+
+        $json.visual.objects.general.properties | Add-Member -MemberType NoteProperty -Name "filter" -Value ($yearFilterJson | ConvertFrom-Json) -Force
+
+    }
+    # Country slicer - remove any filter
+    elseif ($json.name -eq "f42f1648ed721ff28383")
+    {        
+        if ($json.visual.objects.general.properties.filter)
+        {
+            $json.visual.objects.general.properties.PSObject.Properties.Remove('filter')
+        }
+    }
 
     $json | ConvertTo-Json -Depth 100 | Set-Content $file.FullName
 }
