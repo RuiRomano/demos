@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
-  "name": "453f2a06e365e8c07cf4",
+  "name": "3f443b25910f9fa5feac",
   "position": {
-    "x": 49.400098271318178,
+    "x": 681.53839281726,
     "y": 132.64841202483586,
-    "z": 4000,
-    "width": 569.93076338946719,
-    "height": 539.74181444588385,
-    "tabOrder": 4000
+    "z": 4001,
+    "width": 576.33447983204542,
+    "height": 540.65663108053786,
+    "tabOrder": 4001
   },
   "visual": {
     "visualType": "areaChart",
@@ -47,6 +47,20 @@
               },
               "queryRef": "Sales.Sales Amount",
               "nativeQueryRef": "Sales Amount"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Sales"
+                    }
+                  },
+                  "Property": "Cost"
+                }
+              },
+              "queryRef": "Sales.Cost",
+              "nativeQueryRef": "Cost"
             }
           ]
         }
@@ -69,33 +83,6 @@
         ],
         "isDefaultSort": true
       }
-    },
-    "objects": {
-      "lineStyles": [
-        {
-          "properties": {
-            "areaMatchStrokeColor": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "areaColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 4,
-                      "Percent": 0.6
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      ]
     },
     "drillFilterOtherVisuals": true
   },
