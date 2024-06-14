@@ -145,6 +145,24 @@
         }
       }
     },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "339.8817577838224D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sales.Order Date"
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
